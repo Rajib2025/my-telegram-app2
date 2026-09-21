@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Telegram CPA Mini App</title>
+    <!-- টেলিগ্রাম ওয়েব অ্যাপ লাইব্রেরি -->
+    <script src="https://telegram.org/js/telegram-web-app.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: var(--tg-theme-bg-color, #ffffff);
+            color: var(--tg-theme-text-color, #000000);
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        h2 {
+            margin-bottom: 5px;
+        }
+        p.subtitle {
+            color: gray;
+            font-size: 14px;
+            margin-bottom: 20px;
+        }
+        .task-card {
+            background: var(--tg-theme-secondary-bg-color, #f1f1f1);
+            width: 100%;
+            max-width: 400px;
+            padding: 15px;
+            border-radius: 10px;
+            margin-bottom: 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .task-info h4 {
+            margin: 0 0 5px 0;
+        }
+        .task-info p {
+            margin: 0;
+            font-size: 12px;
+            color: #0088cc;
+        }
+        .btn {
+            background-color: var(--tg-theme-button-color, #2481cc);
+            color: var(--tg-theme-button-text-color, #ffffff);
+            border: none;
+            padding: 8px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Complete Tasks & Earn</h2>
+    <p class="subtitle">নিচের অফারগুলো সম্পূর্ণ করে রিওয়ার্ড নিন</p>
+
+    <!-- টাস্ক বা সিপিএ অফার ১ -->
+    <div class="task-card">
+        <div class="task-info">
+            <h4>Install App & Register</h4>
+            <p>Reward: 50 Points</p>
+        </div>
+        <!-- এখানে আপনার সিপিএ নেটওয়ার্কের অফার লিংক বসাবেন -->
+        <a href="https://omg10.com/4/118555801" target="_blank" class="btn" onclick="completeTask(50)">Start</a>
+    </div>
+
+    <!-- টাস্ক বা সিপিএ অফার ২ -->
+    <div class="task-card">
+        <div class="task-info">
+            <h4>Complete a Quick Survey</h4>
+            <p>Reward: 30 Points</p>
+        </div>
+        <!-- এখানে আপনার সিপিএ নেটওয়ার্কের অফার লিংক বসাবেন -->
+        <a href="https://omg10.com/4/11853556 2" target="_blank" class="btn" onclick="completeTask(30)">Start</a>
+    </div>
+
+    <script>
+        // টেলিগ্রাম ওয়েব অ্যাপ ইনিশিয়ালাইজ করা
+        let tg = window.Telegram.WebApp;
+        tg.expand(); // অ্যাপটি ফুল স্ক্রিন করতে সাহায্য করে
+
+        function completeTask(points) {
+            // ইউজার লিংকে ক্লিক করলে টেলিগ্রামের মেইন ইন্টারফেসে ছোট নোটিফিকেশন দেখাতে পারেন
+            tg.HapticFeedback.notificationOccurred('success');
+        }
+    </script>
+
+</body>
+</html>
